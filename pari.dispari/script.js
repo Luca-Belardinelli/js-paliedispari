@@ -11,9 +11,10 @@
 
 const user = prompt(" Vuole essere pari o dispari?")
 
-if (user !== 'pari' && user !== 'dispari') 
+if (user !== 'pari' && user !== 'dispari')
 
     console.log("Scelta non valida, Riprova.");
+
 
 // e inserisce un numero da 1 a 5
 
@@ -23,55 +24,34 @@ if (numberUser < 1 || numberUser > 5 )
 
     console.log("Numero non valido, Inserisci un numero da 1 a 5.");
 
+
 console.log(numberUser);
-
-
 
 
 //Funzione numero casuale da 1 a 5
 
-// // function number() {
+ function numbercpu(min,max) {
 
-// //     let numbeRandom = Math.floor(Math.random() * 5) + 1
-
-// //     console.log(numbeRandom);
-
-// //     return numbeRandom;
-
-// }
-
-
-
-
-//Funzione per la somma 
-
-function sum(num1, num2){
-
-    const somma = num1 + num2
-
-    // valore booleano per verificare se la somma è para
-
-    let verifica = false;
-
-    console.log(somma);
-
-    if(somma % 2 === 0){
-
-        verifica = true;
-    }
-
-    return verifica;
+    return  Math.floor(Math.random() * (max- min +1) + min);
+    
 }
 
+const numbercpu = numberCpuRandom(1,5);
 
-//Recuperiamo il numero del pc
-
-let numerocpu = number();
+console.log("il numero della cpu è", numbercpu);
 
 
-//Sommiamo i due numeri
+ // somma 
 
-let somma = sum(numberUser, number);
+const sommaNumeri = numberUser + numbercpu;
+
+console.log("la somma dei numeri è:", sommaNumeri );
+
+// Funzione per verificare se un numero è pari
+
+function pari(sommaNumeri) {
+    return sommaNumeri % 2 === 0;
+}
 
 
 //Dichiariamo chi ha vinto.
