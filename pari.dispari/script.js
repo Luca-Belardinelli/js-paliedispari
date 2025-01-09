@@ -6,4 +6,32 @@
 //Dichiariamo chi ha vinto.
 
 
+//L’utente sceglie pari o dispari e inserisce un numero da 1 a 5.
 
+const user = prompt(" Vuole essere pari o dispari?")
+
+if (user !== 'pari' && user !== 'dispari')
+
+    console.log("Scelta non valida, Riprova.");
+
+//e inserisce un numero da 1 a 5
+
+const numberUser = parseInt(prompt("inserisca una numero da 1 a 5"))
+
+if (numberUser < 1 || numberUser > 5 )
+
+    console.log("Numero non valido, Inserisci un numero da 1 a 5.");
+
+    console.log(numberUser);
+
+//Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione).
+
+function numberCpu() {
+
+    return Math.floor(Math.random() * 5) + 1;
+    
+}
+
+const numberestrattodalpc = numberCpu;
+
+console.log("il numero della cpu è", numberCpu);
